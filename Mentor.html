@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;family=Space+Grotesk:wght@300..700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#ffdbce",
+                        "on-background": "#231a0d",
+                        "surface-dim": "#e9d7c1",
+                        "surface-tint": "#a83900",
+                        "on-tertiary-container": "#f4fff2",
+                        "on-surface": "#231a0d",
+                        "primary-fixed-dim": "#ffb59a",
+                        "on-surface-variant": "#594139",
+                        "primary-container": "#c84b0f",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#87d89b",
+                        "secondary": "#3f5f92",
+                        "on-error-container": "#93000a",
+                        "error-container": "#ffdad6",
+                        "on-error": "#ffffff",
+                        "outline": "#8c7167",
+                        "on-tertiary-fixed": "#00210c",
+                        "on-secondary-fixed": "#001b3d",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed": "#380d00",
+                        "surface-container": "#fdebd5",
+                        "error": "#ba1a1a",
+                        "surface-bright": "#fff8f3",
+                        "on-primary-fixed-variant": "#802a00",
+                        "secondary-fixed-dim": "#a9c7ff",
+                        "outline-variant": "#e0bfb4",
+                        "secondary-container": "#a5c5fe",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed-variant": "#254778",
+                        "tertiary-container": "#33834f",
+                        "inverse-on-surface": "#ffeeda",
+                        "surface": "#fff8f3",
+                        "surface-container-low": "#fff2e2",
+                        "background": "#fff8f3",
+                        "inverse-primary": "#ffb59a",
+                        "inverse-surface": "#392f20",
+                        "on-tertiary-fixed-variant": "#005228",
+                        "tertiary-fixed": "#a3f5b5",
+                        "surface-variant": "#f2e0ca",
+                        "primary": "#a23700",
+                        "tertiary": "#136938",
+                        "surface-container-highest": "#f2e0ca",
+                        "on-primary-container": "#fffaf9",
+                        "surface-container-high": "#f7e6cf",
+                        "on-primary": "#ffffff",
+                        "on-secondary-container": "#315183",
+                        "secondary-fixed": "#d6e3ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Newsreader"],
+                        "body": ["Manrope"],
+                        "label": ["Space Grotesk"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #e0bfb4; border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-fixed">
+<div class="flex min-h-screen">
+<!-- SideNavBar Navigation Shell -->
+<aside class="flex flex-col h-screen w-64 border-r border-[#231a0d]/10 dark:border-[#f2e0ca]/10 bg-[#fff8f3] dark:bg-[#1a1614] py-8 space-y-8 sticky top-0">
+<div class="px-8">
+<span class="font-serif text-2xl font-medium text-[#231a0d] dark:text-[#f2e0ca]">PassionPath</span>
+<p class="font-mono text-[10px] uppercase tracking-widest text-on-surface/40 mt-1">Archival Authority</p>
+</div>
+<nav class="flex-grow space-y-2">
+<a class="flex items-center space-x-3 text-[#231a0d]/60 dark:text-[#f2e0ca]/60 pl-4 hover:text-[#231a0d] py-2 px-8 hover:bg-[#fdebd5] dark:hover:bg-[#2d241a] transition-colors duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-mono text-xs uppercase tracking-widest">Home</span>
+</a>
+<a class="flex items-center space-x-3 text-[#231a0d]/60 dark:text-[#f2e0ca]/60 pl-4 hover:text-[#231a0d] py-2 px-8 hover:bg-[#fdebd5] dark:hover:bg-[#2d241a] transition-colors duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="font-mono text-xs uppercase tracking-widest">Discover</span>
+</a>
+<a class="flex items-center space-x-3 text-[#231a0d]/60 dark:text-[#f2e0ca]/60 pl-4 hover:text-[#231a0d] py-2 px-8 hover:bg-[#fdebd5] dark:hover:bg-[#2d241a] transition-colors duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="insights">insights</span>
+<span class="font-mono text-xs uppercase tracking-widest">Path</span>
+</a>
+<a class="flex items-center space-x-3 text-[#C84B0F] dark:text-[#E06020] font-bold border-l-2 border-[#C84B0F] pl-4 py-2 px-8 bg-[#fdebd5] dark:bg-[#2d241a] transition-colors duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+<span class="font-mono text-xs uppercase tracking-widest">Mentor</span>
+</a>
+<a class="flex items-center space-x-3 text-[#231a0d]/60 dark:text-[#f2e0ca]/60 pl-4 hover:text-[#231a0d] py-2 px-8 hover:bg-[#fdebd5] dark:hover:bg-[#2d241a] transition-colors duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="trending_up">trending_up</span>
+<span class="font-mono text-xs uppercase tracking-widest">Growth</span>
+</a>
+</nav>
+<div class="px-8 space-y-4">
+<button class="w-full bg-gradient-to-br from-primary to-primary-container text-white py-3 font-label text-xs uppercase tracking-[0.1em] rounded-sm shadow-sm hover:opacity-90 transition-all active:scale-[0.98]">
+                    New Entry
+                </button>
+<div class="pt-8 space-y-2 border-t border-on-surface/5">
+<a class="flex items-center space-x-3 text-on-surface/60 hover:text-on-surface transition-colors py-1" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="settings">settings</span>
+<span class="font-mono text-[10px] uppercase tracking-widest">Settings</span>
+</a>
+<a class="flex items-center space-x-3 text-on-surface/60 hover:text-on-surface transition-colors py-1" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="auto_stories">auto_stories</span>
+<span class="font-mono text-[10px] uppercase tracking-widest">Archive</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-grow flex flex-col bg-surface relative">
+<!-- TopNavBar Component -->
+<header class="flex justify-between items-center w-full px-12 h-16 bg-[#fff8f3]/80 dark:bg-[#1a1614]/80 backdrop-blur-md sticky top-0 z-40 border-b border-[#231a0d]/5 dark:border-[#f2e0ca]/5">
+<div class="flex items-center space-x-8">
+<h1 class="font-serif text-xl font-semibold text-[#231a0d] dark:text-[#f2e0ca]">Mentor Engagement</h1>
+<nav class="hidden md:flex space-x-6">
+<a class="font-mono text-[10px] tracking-[0.05em] uppercase text-[#231a0d]/70 hover:text-[#C84B0F] transition-opacity" href="#">Dashboard</a>
+<a class="font-mono text-[10px] tracking-[0.05em] uppercase text-[#231a0d]/70 hover:text-[#C84B0F] transition-opacity" href="#">Logs</a>
+<a class="font-mono text-[10px] tracking-[0.05em] uppercase text-[#C84B0F] dark:text-[#E06020] border-b border-[#C84B0F]" href="#">Library</a>
+</nav>
+</div>
+<div class="flex items-center space-x-6">
+<div class="flex items-center space-x-4">
+<span class="material-symbols-outlined text-on-surface/60 cursor-pointer hover:text-primary transition-colors" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined text-on-surface/60 cursor-pointer hover:text-primary transition-colors" data-icon="history_edu">history_edu</span>
+</div>
+<img alt="User Avatar" class="w-8 h-8 rounded-full border border-outline-variant/30" data-alt="professional headshot of a woman with a confident smile in soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmlzBVDnzuRxe7-XljmmeORtVUXJ5VBmfYVTubPO5SgfM2lko1-400YAeraI0xw9Q9pwqQIb3RRgL3d5jJ0hZl5GZep6DxCeAEw0mgf8GKb0xSQrFmSBpr5kF31zvTMIrjkEpeo27rRpX8c-jFPN8suKvxGvTEmAIUCRDyBqmKDL08Htt7gvtalTOf8iGdE1GyI9mNnh3yP1Cn7Bs4XaURqIPykGay1V2p8ljQ9tk7uAZCAJc4AXXiFOnocVUXj7tlgcopTfm4ndA"/>
+</div>
+</header>
+<!-- 3-Column Mentor Interface -->
+<section class="flex flex-grow overflow-hidden">
+<!-- COLUMN 1: Structured Conversation Timeline -->
+<div class="w-72 bg-surface-container-low border-r border-outline-variant/10 p-8 flex flex-col space-y-12">
+<div class="space-y-1">
+<span class="font-label text-[10px] text-primary uppercase tracking-[0.2em]">Current Session</span>
+<h2 class="font-headline text-2xl italic">The Philosophical Pivot</h2>
+</div>
+<div class="relative space-y-12 before:absolute before:left-[11px] before:top-2 before:bottom-2 before:w-[1px] before:bg-outline-variant/30">
+<!-- Step 1 (Completed) -->
+<div class="relative pl-8 group">
+<div class="absolute left-0 top-1 w-6 h-6 rounded-full bg-tertiary flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-xs" data-icon="check" style="font-variation-settings: 'wght' 700;">check</span>
+</div>
+<p class="font-label text-[10px] text-on-surface/40 uppercase tracking-widest">01 // Context</p>
+<h4 class="font-headline text-sm font-medium text-on-surface/60">Legacy Definition</h4>
+</div>
+<!-- Step 2 (Active) -->
+<div class="relative pl-8 group">
+<div class="absolute left-0 top-1 w-6 h-6 rounded-full bg-primary border-4 border-surface-container-low flex items-center justify-center text-white scale-125 shadow-sm">
+<div class="w-1.5 h-1.5 bg-white rounded-full"></div>
+</div>
+<p class="font-label text-[10px] text-primary uppercase tracking-widest">02 // Dialogue</p>
+<h4 class="font-headline text-lg italic text-on-surface">Architectural Thinking</h4>
+<p class="font-body text-xs text-on-surface-variant mt-2 leading-relaxed">Deep-dive into the foundational values of your professional trajectory.</p>
+</div>
+<!-- Step 3 (Upcoming) -->
+<div class="relative pl-8 opacity-40 group">
+<div class="absolute left-0 top-1 w-6 h-6 rounded-full bg-outline-variant flex items-center justify-center"></div>
+<p class="font-label text-[10px] uppercase tracking-widest">03 // Synthesis</p>
+<h4 class="font-headline text-sm font-medium">Outcome Mapping</h4>
+</div>
+</div>
+<div class="mt-auto p-4 bg-surface-container-highest/30 rounded-sm">
+<div class="flex items-center space-x-2 mb-2">
+<span class="material-symbols-outlined text-sm text-primary" data-icon="timer">timer</span>
+<span class="font-label text-[10px] uppercase">Session Duration</span>
+</div>
+<p class="font-mono text-xl text-on-surface">14:22</p>
+</div>
+</div>
+<!-- COLUMN 2: Interaction Blocks -->
+<div class="flex-grow p-12 overflow-y-auto space-y-16">
+<!-- Mentor Message Block -->
+<div class="max-w-2xl mx-auto space-y-8">
+<div class="flex items-start space-x-6">
+<div class="w-1 bg-primary self-stretch"></div>
+<div class="space-y-4">
+<span class="font-label text-[10px] uppercase tracking-[0.15em] text-on-surface/50 italic">Mentor Input // Marcus Aurelius AI</span>
+<h3 class="font-headline text-3xl leading-snug">"Consider not what you are doing, but what you are becoming through the doing. If this archival pursuit were to vanish tomorrow, what residue remains in your character?"</h3>
+</div>
+</div>
+<!-- Guided Prompts (Not Chat Bubbles) -->
+<div class="grid grid-cols-1 gap-6 pt-8">
+<div class="p-8 bg-surface-container-lowest border-b-2 border-outline-variant/10 hover:border-primary/40 transition-all cursor-pointer group">
+<p class="font-label text-[10px] text-primary uppercase mb-4 tracking-widest">Reflection Path A</p>
+<h4 class="font-headline text-xl mb-3">Focus on the internal discipline of curation.</h4>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed">Articulate how the act of selection strengthens your objective judgment over subjective preference.</p>
+<div class="mt-6 flex items-center text-primary group-hover:translate-x-2 transition-transform">
+<span class="font-label text-[10px] uppercase mr-2">Select Response</span>
+<span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+<div class="p-8 bg-surface-container-lowest border-b-2 border-outline-variant/10 hover:border-primary/40 transition-all cursor-pointer group">
+<p class="font-label text-[10px] text-secondary uppercase mb-4 tracking-widest">Reflection Path B</p>
+<h4 class="font-headline text-xl mb-3">Focus on the permanence of the external archive.</h4>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed">Discuss the responsibility of leaving behind a structured legacy for those who follow your path.</p>
+<div class="mt-6 flex items-center text-secondary group-hover:translate-x-2 transition-transform">
+<span class="font-label text-[10px] uppercase mr-2">Select Response</span>
+<span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Manual Entry Area -->
+<div class="pt-8">
+<div class="flex items-center justify-between mb-4">
+<label class="font-label text-[10px] uppercase tracking-widest text-on-surface/60">Custom Nuance Entry</label>
+<span class="material-symbols-outlined text-on-surface/40 hover:text-on-surface cursor-pointer" data-icon="info">info</span>
+</div>
+<textarea class="w-full bg-surface-container-low border-b-2 border-outline-variant/20 focus:border-primary focus:ring-0 text-on-surface font-body p-6 placeholder:italic placeholder:text-on-surface/20 resize-none transition-all" placeholder="Enter a thought that transcends the suggested paths..." rows="3"></textarea>
+<div class="mt-4 flex justify-end">
+<button class="bg-on-surface text-surface py-2 px-8 font-label text-[10px] uppercase tracking-[0.1em] hover:bg-primary transition-colors">Submit Entry</button>
+</div>
+</div>
+</div>
+</div>
+<!-- COLUMN 3: User Insight Panel & Mentor Cards -->
+<div class="w-96 bg-surface-container border-l border-outline-variant/10 p-8 space-y-12 overflow-y-auto">
+<!-- Insight Panel -->
+<div class="space-y-6">
+<div class="flex items-center justify-between border-b border-on-surface/5 pb-4">
+<h3 class="font-label text-xs uppercase tracking-[0.2em]">Session Insights</h3>
+<span class="material-symbols-outlined text-sm" data-icon="auto_awesome" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<div class="space-y-8">
+<div class="space-y-2">
+<div class="flex items-center space-x-2">
+<div class="w-2 h-2 bg-primary rounded-full"></div>
+<span class="font-label text-[10px] uppercase text-on-surface/60">Emergent Theme</span>
+</div>
+<p class="font-headline text-lg italic text-on-surface">Digital Stoicism</p>
+<p class="font-body text-[11px] leading-relaxed text-on-surface-variant">The user is trending toward valuing the process over the product, a key indicator of cognitive maturity in the archival space.</p>
+</div>
+<div class="space-y-2">
+<div class="flex items-center space-x-2">
+<div class="w-2 h-2 bg-tertiary rounded-full"></div>
+<span class="font-label text-[10px] uppercase text-on-surface/60">Structural Marker</span>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-surface-container-highest border border-outline-variant/20 font-mono text-[9px] uppercase">Legacy</span>
+<span class="px-2 py-1 bg-surface-container-highest border border-outline-variant/20 font-mono text-[9px] uppercase">Virtue</span>
+<span class="px-2 py-1 bg-surface-container-highest border border-outline-variant/20 font-mono text-[9px] uppercase">Curation</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Mentor Cards (Museum Labels) -->
+<div class="space-y-6">
+<div class="flex items-center justify-between border-b border-on-surface/5 pb-4">
+<h3 class="font-label text-xs uppercase tracking-[0.2em]">Unlock Mentors</h3>
+<span class="material-symbols-outlined text-sm" data-icon="lock_open">lock_open</span>
+</div>
+<div class="space-y-6">
+<!-- Mentor Card 1 -->
+<div class="bg-surface-container-lowest p-6 shadow-sm relative group cursor-pointer border border-transparent hover:border-outline-variant/30 transition-all">
+<div class="absolute -right-2 -top-2 w-8 h-8 bg-surface-container border border-outline-variant/10 flex items-center justify-center rotate-3">
+<span class="material-symbols-outlined text-xs text-on-surface/20" data-icon="lock">lock</span>
+</div>
+<div class="space-y-1">
+<p class="font-label text-[9px] uppercase tracking-widest text-on-surface/40">Item No. 402 // Stoic</p>
+<h4 class="font-headline text-xl font-semibold">Seneca the Younger</h4>
+<p class="font-body text-xs text-on-surface-variant italic py-2">"On the Shortness of Life"</p>
+<div class="pt-4 flex items-center justify-between">
+<div class="h-[1px] bg-outline-variant/30 flex-grow mr-4"></div>
+<span class="font-label text-[10px] uppercase text-primary">Req. 15 Logs</span>
+</div>
+</div>
+</div>
+<!-- Mentor Card 2 -->
+<div class="bg-surface-container-lowest p-6 shadow-sm relative group cursor-pointer border border-transparent hover:border-outline-variant/30 transition-all">
+<div class="absolute -right-2 -top-2 w-8 h-8 bg-surface-container border border-outline-variant/10 flex items-center justify-center -rotate-3">
+<span class="material-symbols-outlined text-xs text-on-surface/20" data-icon="lock">lock</span>
+</div>
+<div class="space-y-1">
+<p class="font-label text-[9px] uppercase tracking-widest text-on-surface/40">Item No. 108 // Renaissance</p>
+<h4 class="font-headline text-xl font-semibold">Leonardo da Vinci</h4>
+<p class="font-body text-xs text-on-surface-variant italic py-2">"Systems Thinking &amp; Art"</p>
+<div class="pt-4 flex items-center justify-between">
+<div class="h-[1px] bg-outline-variant/30 flex-grow mr-4"></div>
+<span class="font-label text-[10px] uppercase text-primary">Req. 40 Logs</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bottom Floating Action -->
+<div class="absolute bottom-8 right-8 z-50">
+<button class="flex items-center space-x-3 bg-on-surface text-surface py-3 px-6 shadow-2xl hover:bg-primary transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="add" style="font-variation-settings: 'wght' 600;">add</span>
+<span class="font-label text-xs uppercase tracking-widest font-bold">Quick Insight</span>
+</button>
+</div>
+</main>
+</div>
+</body></html>
