@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-on-surface font-body;
+  }
+}
+
+@layer components {
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+  }
+
+  .shimmer {
+    background: linear-gradient(90deg, rgba(200, 75, 15, 0) 0%, rgba(200, 75, 15, 0.05) 50%, rgba(200, 75, 15, 0) 100%);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
+
+  @keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+
+  .archival-gradient {
+    @apply bg-gradient-to-br from-[#a23700] to-[#c84b0f];
+  }
+
+  .page-enter {
+    animation: fadeUp 0.3s ease both;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .organic-glow {
+    background: radial-gradient(circle, rgba(200, 75, 15, 0.15) 0%, rgba(255, 248, 243, 0) 70%);
+  }
+
+  .editorial-grid {
+    @apply grid grid-cols-1 lg:grid-cols-12 gap-8;
+  }
+
+  .label-caps {
+    @apply font-label uppercase tracking-wider;
+  }
+}
